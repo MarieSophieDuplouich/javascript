@@ -65,32 +65,53 @@ if(age > 18){
     console.log("Vous êtes mineur");
 }
 
-let tarifsenior_str;
-if(tarifsenior_str  >= 65){
+
+function tarifSenior_func (tarifsenior_func){
+let result_number;
+if(tarifsenior_func  >= 65){
 
 
-  console.log("tu as droit au tarif senior car ton âge est "+tarifsenior_str+"");
+  result_number = "tu as droit au tarif senior car ton âge est ";
 } else {
-    console.log("tu n'as pas droit au tarif senior");
+    result_number = "tu n'as pas droit au tarif senior";
 }
+return result_number;
+  }
+
+  console.log(tarifSenior_func(25));
+
+
+
   
+function tarifMoinsvingtsixans_func ( tarifmoinsvingtsixans_func){
+let  result_number ;
 
-let tarifmoinsvingtsixans_str;
-
-if(tarifmoinsvingtsixans_str <= 26){
+if(tarifmoinsvingtsixans_func <= 26){
   
-  console.log("tu as droit au tarif moins de 26 ans car ton âge est "+tarifmoinsvingtsixans_str+"");
+  result_number = "tu as droit au tarif moins de 26 ans car ton âge est ";
 } else {
-    console.log("tu n'as pas droit au tarif  moins de 26 ans ");
+    result_number = "tu n'as pas droit au tarif  moins de 26 ans ";
+}
+return result_number;
+}
+console.log(tarifMoinsvingtsixans_func(25));
+
+
+
+
+function tarifMineur_func (tarifmineur_func){
+
+let result_str ;
+if(tarifmineur_func  <= 18){
+
+result_str = "tu as droit au tarif moins de 18 ans";
+} else {
+    result_str = "tu n'as pas droit au tarif  moins de 18 ans ";
+}
+return result_str;
 }
 
-let tarifmineur_str;
-if(tarifmineur_str  <= 18){
-
-  console.log("tu as droit au tarif moins de 18 ans car ton âge est "+tarifmineur_str+"");
-} else {
-    console.log("tu n'as pas droit au tarif  moins de 18 ans ");
-}
+console.log(tarifMineur_func(25));
 
 
 function testNum(a) {
@@ -105,3 +126,4 @@ function testNum(a) {
 
 console.log(testNum(-5));
 // Expected output: "NOT positive"
+
