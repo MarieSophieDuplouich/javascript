@@ -51,17 +51,52 @@
 // "Tarif Mineur" si l'âge est inférieur à 18
 // "Tarif Normal" dans les autres cas.
 
-let tarifsenior >= 65;
-let tarifmoinsvingtsixans  <= 26;
-let tarifmineur  <=18;
-let tarifnormal = 30 ;
-
+let tarifsenior_str >= 65;
+let tarifmoinsvingtsixans_str  <= 26;
+let tarifmineur_str  <=18;
+// let tarifnormal_str = 30 ;
+let nom_str = "Duplouich";
 
 let prenom = "Marie-Sophie";
 let age = 25;
 
 if(age > 18){
-    console.log("Bonjour " +prenom+ " Vous êtes majeur : "+age+" ans");
+    console.log("Bonjour " +prenom+" "+nom_str+ " Vous êtes majeur : "+age+" ans");
 } else {
     console.log("Vous êtes mineur");
 }
+
+
+if(tarifsenior_str  >= 65){
+
+  console.log("tu as droit au tarif senior car ton âge est "+tarifsenior_str+"");
+} else {
+    console.log("tu n'as pas droit au tarif senior");
+}
+
+if(tarifmoinsvingtsixans_str <= 26){
+
+  console.log("tu as droit au tarif moins de 26 ans car ton âge est "+tarifmoinsvingtsixans_str+"");
+} else {
+    console.log("tu n'as pas droit au tarif  moins de 26 ans ");
+}
+
+if(tarifmineur_str  <= 18){
+
+  console.log("tu as droit au tarif moins de 18 ans car ton âge est "+tarifmineur_str+"");
+} else {
+    console.log("tu n'as pas droit au tarif  moins de 18 ans ");
+}
+
+function testNum(a) {
+  let result;
+  if (a > 0) {
+    result = "positive";
+  } else {
+    result = "NOT positive";
+  }
+  return result;
+}
+
+console.log(testNum(-5));
+// Expected output: "NOT positive"
