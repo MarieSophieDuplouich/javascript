@@ -143,16 +143,23 @@
 // Affichez le résultat dans la console en appelant la fonction avec deux valeurs de votre choix.
 // Utilisez setInterval pour afficher "Ceci s'affiche toutes les 2 secondes" dans la console toutes les 2 secondes.
 
-function addition_func(){
-let addition =  parseInt(prompt("Saisis un premier chiffre"));
-let secondaddition =  parseInt(prompt("Saisis un deuxième chiffre"));
-let firstcalculus = addition + secondaddition;
-let secondsecondcalculus = addition + secondaddition
- alert("Bonjour, le total est de  " +  secondsecondcalculus + "!");
-}
-setInterval( addition_func, 2000);
+// function addition_func(){
+// let addition =  parseInt(prompt("Saisis un premier chiffre"));
+// let secondaddition =  parseInt(prompt("Saisis un deuxième chiffre"));
+// let firstcalculus = addition + secondaddition;
+// let secondsecondcalculus = addition + secondaddition
+//  alert("Bonjour, le total est de  " +  secondsecondcalculus + "!");
+// }
+// setInterval( addition_func, 2000);
 
 
 
 // Créez une fonction qui affiche la date 
 // et l'heure actuelles dans la console, puis utilisez setInterval pour exécuter cette fonction toutes les secondes.
+
+
+function date_func(){
+let now = new Date();
+alert( now );
+}
+setInterval( date_func, 1000);
