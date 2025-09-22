@@ -127,3 +127,15 @@
 // console.log(testNum(-5));
 // Expected output: "NOT positive"
 
+// Créez une fonction nommée saluer_func 
+// qui prend un prénom un paramètre et affiche 
+// "Bonjour, [prénom] !" dans la console. 
+// Appelez cette fonction avec votre prénom. Ensuite, utilisez prompt pour demander le prénom à l'utilisateur.
+
+// function saluer_func(){
+// let firstname_str =  prompt("Saisis ton prénom");
+//  alert("Bonjour,  " +  firstname_str + "!");
+// }
+// setInterval(saluer_func, 4000);
+
+
