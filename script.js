@@ -158,8 +158,47 @@
 // et l'heure actuelles dans la console, puis utilisez setInterval pour exécuter cette fonction toutes les secondes.
 
 
-function date_func(){
-let now = new Date();
-alert( now );
-}
-setInterval( date_func, 1000);
+// function date_func(){
+// let now = new Date();
+// alert( now );
+// }
+// setInterval( date_func, 1000);
+
+
+// Créez un tableau contenant trois prénoms, puis affichez chacun d'eux dans la console à l'aide d'une boucle for.
+
+// Même chose avec la fonction forEach
+
+// const firtsname_arr = ["Paul","Bob","Olivier"];
+// for(const name_str of firtsname_arr){
+//     console.log(name_str); 
+// }
+
+
+// const firtsname_arr = ["Paul","Bob","Olivier"];
+// firtsname_arr.forEach( function(name_str){
+//     console.log(name_str);
+// } );
+
+const voiture_obj  = {
+    marque: "Peugeot",
+    modele: 320,
+    annee: "2008",
+   marque: "Citroën",
+    modele: 340,
+    annee: "2008",
+   marque: "Hyundai",
+    modele: 340,
+    annee: "2008",
+    marque: "Skoda",
+    modele: 340,
+    annee: "2008",
+     marque: "Volvo",
+    modele: 340,
+    annee: "2008"
+};
+
+console.log(  voiture_obj.nom );
+console.log( voiture_obj["marque"] ); // On peut aussi accéder aux propriétés avec des crochets à la manière du PHP.
+console.log( voiture_obj["modele"] );
+// Déclarez un objet voiture_obj avec les propriétés marque, modele et annee, puis affichez la marque et le modèle dans la console.
