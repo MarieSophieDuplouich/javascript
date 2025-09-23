@@ -230,3 +230,55 @@
 
 
 // Déclarez un objet livre_obj avec les propriétés titre, auteur et anneePublication, puis affichez le titre et l'auteur dans la console.
+// const h1_elem = document.querySelector("h1");    // HTMLElement
+// const photoProfil_elem = document.querySelector("#photo_profil"); // HTMLElement
+// const produits_arr = document.querySelectorAll(".produit"); // Array of HTMLElement
+// h1_elem.style.display = "lightblue";
+
+// Array of HTMLElement
+
+
+// console.log(produits_arr[0]); // La div des Nike
+// console.log(produits_arr[1]); // La div des Adidas
+// console.log(produits_arr[2]); // La div des Puma
+// // // console.log(produits_arr.length);
+// const color =  document.getElementsByClassName(".myH2").style.background = "#ff0000";
+
+const produits_arr = document.querySelectorAll("#produit"); 
+// produits_arr.forEach(produit_elem=>{
+//     // Les objet Element possède également la fonction querySelector.
+//     console.log(produit_elem.querySelector("p").innerText);
+//     produits_arr.forEach(produit_elem=>{
+        
+//        produit_elem.style.background = "lightblue";
+
+//  }) };
+
+
+ produits_arr.forEach(produit_elem=>{
+
+
+    console.log(produit_elem.querySelector("p").innerText);
+
+    // Les objet Element possède également la fonction querySelector.
+
+  produit_elem.style.background = "lightblue";
+
+});
+
+// const notes = [10, 12, 18, 19, 15, 8];
+
+// notes.forEach((note)=>{
+//     console.log(note);
+// });
+
+// produits_arr.forEach(produit_elem=>{
+//     // Les objet Element possède également la fonction querySelector.
+//     console.log(produit_elem.querySelector("p").innerText);
+// });
+
+
+
+
+
+
