@@ -180,25 +180,53 @@
 //     console.log(name_str);
 // } );
 
-const voiture_obj  = {
-    marque: "Peugeot",
-    modele: 320,
-    annee: "2008",
-   marque: "Citroën",
-    modele: 340,
-    annee: "2008",
-   marque: "Hyundai",
-    modele: 340,
-    annee: "2008",
-    marque: "Skoda",
-    modele: 340,
-    annee: "2008",
-     marque: "Volvo",
-    modele: 340,
-    annee: "2008"
-};
+// const voiture_obj  = {
+//     marque: "Peugeot",
+//     modele: 320,
+//     annee: "2008",
+//    marque: "Citroën",
+//     modele: 340,
+//     annee: "2008",
+//    marque: "Hyundai",
+//     modele: 340,
+//     annee: "2008",
+//     marque: "Skoda",
+//     modele: 340,
+//     annee: "2008",
+//      marque: "Volvo",
+//     modele: 340,
+//     annee: "2008"
+// };
 
-console.log(  voiture_obj.nom );
-console.log( voiture_obj["marque"] ); // On peut aussi accéder aux propriétés avec des crochets à la manière du PHP.
-console.log( voiture_obj["modele"] );
-// Déclarez un objet voiture_obj avec les propriétés marque, modele et annee, puis affichez la marque et le modèle dans la console.
+// console.log(  voiture_obj.nom );
+// console.log( voiture_obj["marque"] ); // On peut aussi accéder aux propriétés avec des crochets à la manière du PHP.
+// console.log( voiture_obj["modele"] );
+// // Déclarez un objet voiture_obj avec les propriétés marque, modele et annee, puis affichez la marque et le modèle dans la console.
+
+// Créez une variable ville_str contenant le nom de votre ville, puis affichez-la dans la console.
+
+
+// Écrivez un programme qui demande à l'utilisateur son âge avec prompt, puis affiche "Vous êtes majeur" si l'âge est supérieur ou égal à 18, sinon affiche "Vous êtes mineur".
+
+// Créez un tableau couleurs_arr contenant les couleurs "rouge", "vert" et "bleu", puis affichez chaque couleur dans la console à l'aide d'une boucle for.
+
+
+// Ajoutez la couleur "jaune" à la fin du tableau couleurs_arr, puis affichez le tableau mis à jour dans la console.
+
+
+// Écrivez une fonction multiplier_func qui prend deux nombres en paramètres et retourne leur produit. Affichez le résultat dans la console en appelant la fonction avec deux valeurs de votre choix.
+
+
+// Utilisez setInterval pour afficher "Ceci s'affiche toutes les 3 secondes" dans la console toutes les 3 secondes.
+
+
+// Créez un tableau nombres_arr contenant les nombres de 1 à 10, puis utilisez la méthode filter pour créer un nouveau tableau contenant uniquement les nombres pairs. Affichez ce nouveau tableau dans la console.
+
+
+// Utilisez la méthode map pour créer un nouveau tableau contenant les carrés des nombres du tableau nombres_arr. Affichez ce nouveau tableau dans la console.
+
+
+// Utilisez la méthode reduce pour calculer la somme des nombres du tableau nombres_arr, puis affichez le résultat dans la console.
+
+
+// Déclarez un objet livre_obj avec les propriétés titre, auteur et anneePublication, puis affichez le titre et l'auteur dans la console.
