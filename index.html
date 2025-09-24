@@ -26,50 +26,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search pokemon exemple</title>
 
-        <style>
+    <style>
         .produits_container {
             display: flex;
             gap: 20px;
         }
+
         .produit {
             border: 1px solid black;
             padding: 10px;
         }
-* {
-  box-sizing: border-box;
-}
 
-#myInput {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
+        * {
+            box-sizing: border-box;
+        }
 
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
+        #myInput {
+            background-image: url('/css/searchicon.png');
+            background-position: 10px 12px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
 
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  color: black;
-  display: block
-}
+        #myUL {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
 
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
-}
+        #myUL li a {
+            border: 1px solid #ddd;
+            margin-top: -1px;
+            /* Prevent double borders */
+            background-color: #f6f6f6;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            color: black;
+            display: block
+        }
+
+        #myUL li a:hover:not(.header) {
+            background-color: #eee;
+        }
     </style>
 </head>
 
@@ -88,63 +91,63 @@
         console.log("Vous avez " + age_str + " ans");
         alert("Coucou !");</script> -->
 
-<!-- Demandez à l'utilisateur son prénom avec prompt, 
+    <!-- Demandez à l'utilisateur son prénom avec prompt, 
  puis affichez un message personnalisé dans la console, par exemple "Bonjour, [prénom] !" à partir du code suivant : -->
 
- <!-- <script>console.log("Hello World");
+    <!-- <script>console.log("Hello World");
         let firstName_str = prompt("Quel est votre prénom ?");
         console.log("Bonjour," +  firstName_str + "!");
         alert("Bonjour," +  firstName_str + "!");</script> -->
- <!-- <script>let age_str =  prompt("Quel est votre âge ?");
+    <!-- <script>let age_str =  prompt("Quel est votre âge ?");
 let age_number = parseInt(age_str);
 console.log(age_number+1);</script> -->
 
-<!-- Demandez à l'utilisateur son année de naissance avec prompt, calculez son âge (en supposant que nous sommes en 2024) et affichez-le dans la console. -->
-<!-- 
+    <!-- Demandez à l'utilisateur son année de naissance avec prompt, calculez son âge (en supposant que nous sommes en 2024) et affichez-le dans la console. -->
+    <!-- 
 <script>let age_number =  parseInt(prompt("Quel est votre âge (donnez  votre année de naissance?"));
 let calculus = 2024 - age_number;
  alert("Bonjour, vous avez " +  calculus + "!");
 </script> -->
 
 
-<!-- Demandez à l'utilisateur deux nombres avec prompt, additionnez-les et affichez le résultat dans la console. -->
+    <!-- Demandez à l'utilisateur deux nombres avec prompt, additionnez-les et affichez le résultat dans la console. -->
 
-<!-- <script>let addition =  parseInt(prompt("Saisis un premier chiffre"));
+    <!-- <script>let addition =  parseInt(prompt("Saisis un premier chiffre"));
 let secondaddition =  parseInt(prompt("Saisis un deuxième chiffre"));
 let firstcalculus = addition + secondaddition;
 let secondsecondcalculus = addition + secondaddition
  alert("Bonjour, le total est de  " +  secondsecondcalculus + "!");
 </script> -->
 
-<!-- <script>const fruits_arr = ["Pomme","Banane","Orange"];
+    <!-- <script>const fruits_arr = ["Pomme","Banane","Orange"];
 console.log(fruits_arr[0]); // Pomme
 console.log(fruits_arr[1]); // Banane
 console.log(fruits_arr[2]); // Orange
 console.log(fruits_arr.length); // 3</script> -->
 
-<!-- <script>const fruits_arr = ["Pomme","Banane","Orange"];
+    <!-- <script>const fruits_arr = ["Pomme","Banane","Orange"];
 console.log(fruits_arr); // Affiche tout le tableau dans la console
 console.table(fruits_arr); // Affiche le tableau sous forme de tableau dans la console</script> -->
 
-<!-- <script>const fruits_arr = ["Pomme","Banane","Orange"];
+    <!-- <script>const fruits_arr = ["Pomme","Banane","Orange"];
 console.log(fruits_arr.length); // 3</script> -->
-<!-- <script>const eleves_arr = ["Alice","Bob","Charlie"];
+    <!-- <script>const eleves_arr = ["Alice","Bob","Charlie"];
 eleves_arr.push("David");
 console.log(eleves_arr); // ["Alice","Bob","Charlie","David"]</script> -->
 
 
-<!-- Exercices sur les tableaux
+    <!-- Exercices sur les tableaux
 Créez un tableau nombres_arr contenant les nombres de 1 à 5, puis affichez-le dans la console avec un console.log
 
 Ajoutez un élément à la fin d'un tableau de fruits fruits_arr, puis affichez le tableau mis à jour dans la console.
 
 Créez un tableau de prénoms prenoms_arr et affichez le nombre d'éléments qu'il contient dans la console. -->
 
-<!-- 
+    <!-- 
 <script>const nombres_arr = [1,2,3,4,5];
 console.log(nombres_arr);</script>  -->
 
-<!-- <script>const fruits_arr = ["Pomme","Banane","Orange"];
+    <!-- <script>const fruits_arr = ["Pomme","Banane","Orange"];
 fruits_arr.push("Raisin");
 console.log(fruits_arr);
 </script>
@@ -175,9 +178,9 @@ console.log(prenoms_arr);</script> -->
 
 <h2>My Phonebook</h2> -->
 
-<!-- Quand  je tape un mot dans la barre de recherche ça m'affiche un résultat, ça affiche du texte donc c'est du contenu -->
+    <!-- Quand  je tape un mot dans la barre de recherche ça m'affiche un résultat, ça affiche du texte donc c'est du contenu -->
 
-<!-- <h2>My Phonebook</h2>
+    <!-- <h2>My Phonebook</h2>
 
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 
@@ -194,7 +197,7 @@ console.log(prenoms_arr);</script> -->
 </ul> -->
 
 
-
+    <!-- 
   <h1>Créer ton Media!</h1>
     <form class="form_media">
         <input type="text" placeholder="Nom du média" name="titre_media">
@@ -205,8 +208,43 @@ console.log(prenoms_arr);</script> -->
         
         <h2 class="titre_media">Nom</h2>
         <div class="media_description">Description</div>
-    </div>
+    </div> -->
 
+
+    <h1>Liste des 10 premiers pokémons.</h1>
+    <p class="loading">En cours de chargement...</p>
+
+    <script>
+        fetch("https://pokebuildapi.fr/api/v1/pokemon/limit/10")
+            .then(response_obj => response_obj.json())
+            .then(pokemons_arr => {
+                const loadingTag_elem = document.querySelector(".loading");
+                loadingTag_elem.remove();
+                pokemons_arr.forEach(pokemon_obj => {
+                    console.log(pokemon_obj.name);
+                    // J'ai le nom du pokémon 
+                    // Je vais l'ajouter au body
+
+                    // J'ai besoin d'une balise p
+                    const pTag_elem = document.createElement("p");
+
+                    // J'ajoute le nom du pokémon dans le texte de la balise
+                    pTag_elem.textContent = pokemon_obj.name;
+
+                    // J'ajoute la balise dans le body
+                    document.body.appendChild(pTag_elem);
+                });
+                console.log(pokemons_arr)
+            });
+
+    </script>
+    <!-- Testez le programme précédent.
+Faites un console.log(pokemons_arr) pour vous informer des attributs de chaque pokémon du tableau de pokémons.
+En plus du nom, affichez également l'image de chaque pokémon.
+Quand je choisis un pokemon, l'image doit apparaître -> src  c'est un attribut
+
+Affichez son image et son sprite (le design Gameboy).
+Ajoutez un container grid et affichez correctement chaque pokémon (nom et image) avec un display grid. Code patron ci-dessous. -->
 
     <script src="script.js"></script>
 </body>
