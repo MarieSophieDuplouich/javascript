@@ -8,9 +8,9 @@
 //     console.log("Longitude: " + position.coords.longitude);
 // }
 
-    // /**
-    //  * L'objectif est rechercher et afficher un pokémon en fonction de son nom
-    //  */
+    /**
+     * L'objectif est rechercher et afficher un pokémon en fonction de son nom
+     */
 
     // // 1. Je récupère le formulaire HTML
     // const formPokemon = document.querySelector(".form_pokemon");
@@ -317,32 +317,80 @@
 // InnerHtml lié au balise html
 // Quand  je tape un mot dans la barre de recherche ça m'affiche un résultat, ça affiche du texte donc c'est du contenu
 
-function myFunction() {
-    let  input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
+// function myFunction() {
+//     let  input, filter, ul, li, a, i, txtValue;
+//     input = document.getElementById("myInput");
+//     filter = input.value.toUpperCase();
+//     ul = document.getElementById("myUL");
+//     li = ul.getElementsByTagName("li");
     
-    for (i = 0; i < li.length; i++) {
+//     for (i = 0; i < li.length; i++) {
 
-        a = li[i].getElementsByTagName("a")[0];
-
-        
-        txtValue = a.textContent || a.innerText;
+//         a = li[i].getElementsByTagName("a")[0];
 
         
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
+//         txtValue = a.textContent || a.innerText;
+
+
+//         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//             li[i].style.display = "";
+//         } else {
+//             li[i].style.display = "none";
+//         }
+//     }
+// }
+
+
+
+// Créez un formulaire de création de media (titre, description) 
+// qui affiche les données du formulaire dans la console lorsque l'utilisateur soumet le formulaire.
+
+// Quand je tape mes données dans le formulaire,  le résultat s'affiche bref inneretxt bref contenu
+
+// const media = [
+
+//   {titre:'Harry Potter à l\'école des sorciers', description : 'Harry est un orphelin vivant chez ses méchants beaux-parents. Il dort dans un placard'},
+//   {titre:'Mario sait compter', description : 'Apprends à compter avec Mario Bros'},
+//   {titre:'les 100 mystères', description : 'trouve les 100 mystères dans chaque page'}
+// ]
+
+
+// console.log(media)
+
+
+    /**
+     * L'objectif est rechercher et afficher un pokémon en fonction de son nom
+     */
+
+    // 1. Je récupère le formulaire HTML
+    const formMedia = document.querySelector(".form_media");
+    
+    // 2. J'affecte une fonction à l'évenement submit du formulaire
+    //   Cette fonction sera appelée à chaque fois que l'utilisateur soumettra le formulaire (via la touche entrée ou le bouton)
+    formMedia.onsubmit = searchMedia;
+
+    // 3. Je déclare la fonction searchPokemon
+    async function searchMedia(formEvent){
+        // Annule le rechargement de la page
+        formEvent.preventDefault();  
+        
+        // Récupère les données du formulaire via une objet FormData
+        const formData = new FormData(formMedia); 
+
+        // Grâce à l'objet FormData, je peux récupérer facilement les valeurs des champs du formulaire
+        const mediaTitre = formData.get("titre_media"); // Récupère la valeur du champ "pokemon_name"
+        console.log(mediaTitre);
+
+        const mediaDescription = formData.get("media_description"); // Récupère la valeur du champ "pokemon_name"
+        console.log(mediaDescription);
+
+        // // Envoi de la requête HTTP au serveur pokebuildapi.fr
+        // const response = await fetch("https://pokebuildapi.fr/api/v1/pokemon/"+pokemonName);
+        // // Réponse de la requête HTTP : un objet pokemon au format JSON convertit en objet JS
+        // const pokemon = await response.json();
+
+        // Mise à jour de l'affichage
+        document.querySelector(".titre_media").innerText = mediaTitre;
+        document.querySelector(".media_description").innerText = mediaDescription;
     }
-}
-
-
-
-// Créez un formulaire de création de media (titre, description) qui affiche les données du formulaire dans la console lorsque l'utilisateur soumet le formulaire.
-
-
-
+              
