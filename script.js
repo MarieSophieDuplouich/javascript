@@ -8,9 +8,9 @@
 //     console.log("Longitude: " + position.coords.longitude);
 // }
 
-    /**
-     * L'objectif est rechercher et afficher un pokémon en fonction de son nom
-     */
+    // /**
+    //  * L'objectif est rechercher et afficher un pokémon en fonction de son nom
+    //  */
 
     // // 1. Je récupère le formulaire HTML
     // const formPokemon = document.querySelector(".form_pokemon");
@@ -244,7 +244,7 @@
 // // // console.log(produits_arr.length);
 // const color =  document.getElementsByClassName(".myH2").style.background = "#ff0000";
 
-const produits_arr = document.querySelectorAll("#produit"); 
+// const produits_arr = document.querySelectorAll("#produit"); 
 // produits_arr.forEach(produit_elem=>{
 //     // Les objet Element possède également la fonction querySelector.
 //     console.log(produit_elem.querySelector("p").innerText);
@@ -255,16 +255,16 @@ const produits_arr = document.querySelectorAll("#produit");
 //  }) };
 
 
- produits_arr.forEach(produit_elem=>{
+//  produits_arr.forEach(produit_elem=>{
 
 
-    console.log(produit_elem.querySelector("p").innerText);
+//     console.log(produit_elem.querySelector("p").innerText);
 
-    // Les objet Element possède également la fonction querySelector.
+//     // Les objet Element possède également la fonction querySelector.
 
-  produit_elem.style.background = "lightblue";
+//   produit_elem.style.background = "lightblue";
 
-});
+// });
 
 // const notes = [10, 12, 18, 19, 15, 8];
 
@@ -277,8 +277,72 @@ const produits_arr = document.querySelectorAll("#produit");
 //     console.log(produit_elem.querySelector("p").innerText);
 // });
 
+// const btnHello_elem = document.querySelector(".btn_hello");
+// btnHello_elem.addEventListener("click",sayHello_func);
+// function sayHello_func(){
+//     alert("Hello everyone !");
+// }
 
 
+      // let div = document.getElementById('myDiv');
+
+      // let txt = '';
+
+ 
+
+      // if (div.textContent) { // « textContent » existe ? Alors on s'en sert !
+
+      //     txt = div.textContent;
+
+      // } else if(div.innerText) { // « innerText » existe ? Alors on doit être sous IE.
+
+      //     txt = div.innerText + ' [via Internet Explorer]';
+
+      // } else { // Si aucun des deux n'existe, cela est sûrement dû au fait qu'il n'y a pas de texte
+
+      //     txt = ''; // On met une chaîne de caractères vide
+
+      // }
+
+ 
+
+      // alert(txt);
+
+
+// Exercises :
+
+// Créez une barre de recherche qui affiche chaque caractère tapé dans la console à chaque fois que l'utilisateur tape une touche.
+// InnerText lié au Text
+
+// InnerHtml lié au balise html
+// Quand  je tape un mot dans la barre de recherche ça m'affiche un résultat, ça affiche du texte donc c'est du contenu
+
+function myFunction() {
+    let  input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    
+    for (i = 0; i < li.length; i++) {
+
+        a = li[i].getElementsByTagName("a")[0];
+
+        
+        txtValue = a.textContent || a.innerText;
+
+        
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+
+
+// Créez un formulaire de création de media (titre, description) qui affiche les données du formulaire dans la console lorsque l'utilisateur soumet le formulaire.
 
 
 
