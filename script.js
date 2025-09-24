@@ -317,28 +317,27 @@
 // InnerHtml lié au balise html
 // Quand  je tape un mot dans la barre de recherche ça m'affiche un résultat, ça affiche du texte donc c'est du contenu
 
-// function myFunction() {
-//     let  input, filter, ul, li, a, i, txtValue;
-//     input = document.getElementById("myInput");
-//     filter = input.value.toUpperCase();
-//     ul = document.getElementById("myUL");
-//     li = ul.getElementsByTagName("li");
-    
-//     for (i = 0; i < li.length; i++) {
+function myFunction() {
+    let  input, filter, ul, li, a, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    Array.from(li).forEach((elem) => {
 
-//         a = li[i].getElementsByTagName("a")[0];
+        a = elem.getElementsByTagName("a")[0];
 
         
-//         txtValue = a.textContent || a.innerText;
+        txtValue = a.textContent || a.innerText;
 
 
-//         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-//             li[i].style.display = "";
-//         } else {
-//             li[i].style.display = "none";
-//         }
-//     }
-// }
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            elem.style.display = "";
+        } else {
+            elem.style.display = "none";
+        }      
+    })
+  }
 
 
 
@@ -362,35 +361,37 @@
      * L'objectif est rechercher et afficher un pokémon en fonction de son nom
      */
 
-    // 1. Je récupère le formulaire HTML
-    const formMedia = document.querySelector(".form_media");
+    // // 1. Je récupère le formulaire HTML
+    // const formMedia = document.querySelector(".form_media");
     
-    // 2. J'affecte une fonction à l'évenement submit du formulaire
-    //   Cette fonction sera appelée à chaque fois que l'utilisateur soumettra le formulaire (via la touche entrée ou le bouton)
-    formMedia.onsubmit = searchMedia;
+    // // 2. J'affecte une fonction à l'évenement submit du formulaire
+    // //   Cette fonction sera appelée à chaque fois que l'utilisateur soumettra le formulaire (via la touche entrée ou le bouton)
+    // formMedia.onsubmit = searchMedia;
 
-    // 3. Je déclare la fonction searchPokemon
-    async function searchMedia(formEvent){
-        // Annule le rechargement de la page
-        formEvent.preventDefault();  
+    // // 3. Je déclare la fonction searchPokemon
+    // async function searchMedia(formEvent){
+    //     // Annule le rechargement de la page
+    //     formEvent.preventDefault();  
         
-        // Récupère les données du formulaire via une objet FormData
-        const formData = new FormData(formMedia); 
+    //     // Récupère les données du formulaire via une objet FormData
+    //     const formData = new FormData(formMedia); 
 
-        // Grâce à l'objet FormData, je peux récupérer facilement les valeurs des champs du formulaire
-        const mediaTitre = formData.get("titre_media"); // Récupère la valeur du champ "pokemon_name"
-        console.log(mediaTitre);
+    //     // Grâce à l'objet FormData, je peux récupérer facilement les valeurs des champs du formulaire
+    //     const mediaTitre = formData.get("titre_media"); // Récupère la valeur du champ "pokemon_name"
+    //     console.log(mediaTitre);
 
-        const mediaDescription = formData.get("media_description"); // Récupère la valeur du champ "pokemon_name"
-        console.log(mediaDescription);
+    //     const mediaDescription = formData.get("media_description"); // Récupère la valeur du champ "pokemon_name"
+    //     console.log(mediaDescription);
 
-        // // Envoi de la requête HTTP au serveur pokebuildapi.fr
-        // const response = await fetch("https://pokebuildapi.fr/api/v1/pokemon/"+pokemonName);
-        // // Réponse de la requête HTTP : un objet pokemon au format JSON convertit en objet JS
-        // const pokemon = await response.json();
+    //     // // Envoi de la requête HTTP au serveur pokebuildapi.fr
+    //     // const response = await fetch("https://pokebuildapi.fr/api/v1/pokemon/"+pokemonName);
+    //     // // Réponse de la requête HTTP : un objet pokemon au format JSON convertit en objet JS
+    //     // const pokemon = await response.json();
 
-        // Mise à jour de l'affichage
-        document.querySelector(".titre_media").innerText = mediaTitre;
-        document.querySelector(".media_description").innerText = mediaDescription;
-    }
+    //     // Mise à jour de l'affichage
+    //     document.querySelector(".titre_media").innerText = mediaTitre;
+    //     document.querySelector(".media_description").innerText = mediaDescription;
+    // }
               
+
+  //  voir create element
