@@ -357,41 +357,41 @@
 // console.log(media)
 
 
-    // 1. Je récupère le formulaire HTML
-    const formMedia = document.querySelector("form");
+//     // 1. Je récupère le formulaire HTML
+//     const formMedia = document.querySelector("form");
     
-    // 2. J'affecte une fonction à l'évenement submit du formulaire
-    //   Cette fonction sera appelée à chaque fois que l'utilisateur soumettra le formulaire (via la touche entrée ou le bouton)
-    formMedia.onsubmit = searchMedia;
+//     // 2. J'affecte une fonction à l'évenement submit du formulaire
+//     //   Cette fonction sera appelée à chaque fois que l'utilisateur soumettra le formulaire (via la touche entrée ou le bouton)
+//     formMedia.onsubmit = searchMedia;
 
-    // 3. Je déclare la fonction searchMedia
-    async function searchMedia(formEvent){
-        // Annule le rechargement de la page
-        formEvent.preventDefault();  
+//     // 3. Je déclare la fonction searchMedia
+//     async function searchMedia(formEvent){
+//         // Annule le rechargement de la page
+//         formEvent.preventDefault();  
         
-        // Récupère les données du formulaire via une objet FormData
-        const formData = new FormData(formMedia); 
+//         // Récupère les données du formulaire via une objet FormData
+//         const formData = new FormData(formMedia); 
 
-        // Grâce à l'objet FormData, je peux récupérer facilement les valeurs des champs du formulaire
-        const mediaTitre = formData.get("titre_media"); 
-        console.log(mediaTitre);
+//         // Grâce à l'objet FormData, je peux récupérer facilement les valeurs des champs du formulaire
+//         const mediaTitre = formData.get("titre_media"); 
+//         console.log(mediaTitre);
 
-        const mediaDescription = formData.get("media_description"); 
-        console.log(mediaDescription);
+//         const mediaDescription = formData.get("media_description"); 
+//         console.log(mediaDescription);
 
     
-        // Mise à jour de l'affichage
-        // document.querySelector(".titre_media").innerText = mediaTitre;
-        // document.querySelector(".media_description").innerText = mediaDescription;
+//         // Mise à jour de l'affichage
+//         // document.querySelector(".titre_media").innerText = mediaTitre;
+//         // document.querySelector(".media_description").innerText = mediaDescription;
 
-        const nouvelleBalise_elem = document.createElement("h2");
-nouvelleBalise_elem.innerText = mediaTitre;
-document.body.appendChild(nouvelleBalise_elem);
+//         const nouvelleBalise_elem = document.createElement("h2");
+// nouvelleBalise_elem.innerText = mediaTitre;
+// document.body.appendChild(nouvelleBalise_elem);
 
-      const nouvelleBalise_elem_des= document.createElement("div");
-nouvelleBalise_elem_des.innerText = mediaDescription;
-document.body.appendChild(nouvelleBalise_elem_des);
-    }
+//       const nouvelleBalise_elem_des= document.createElement("div");
+// nouvelleBalise_elem_des.innerText = mediaDescription;
+// document.body.appendChild(nouvelleBalise_elem_des);
+//     }
               
 
   //  voir create element

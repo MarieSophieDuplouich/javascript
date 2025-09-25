@@ -25,7 +25,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search pokemon exemple</title>
-
+    <!-- 
     <style>
         .produits_container {
             display: flex;
@@ -73,6 +73,30 @@
         #myUL li a:hover:not(.header) {
             background-color: #eee;
         }
+    </style> -->
+
+    <style>
+        .pokemons-grid {
+            width: min(1000px, 100%);
+            margin: 0 auto;
+            columns: 3 100px;
+            column-gap: 1em;
+        }
+
+        .pokemon {
+animation: horizontal-shaking 0.35s 7;
+        }
+
+        img {
+            width: 50%;
+        }
+@keyframes horizontal-shaking {
+ 0% { transform: translateX(0) }
+ 25% { transform: translateX(5px) }
+ 50% { transform: translateX(-5px) }
+ 75% { transform: translateX(5px) }
+ 100% { transform: translateX(0) }
+}
     </style>
 </head>
 
@@ -211,8 +235,22 @@ console.log(prenoms_arr);</script> -->
     </div> -->
 
 
+    <!-- En plus du nom, affichez également l'image de chaque pokémon.
+Quand je choisis un pokemon, l'image doit apparaître -> src  c'est un attribut
+
+Affichez son image et son sprite (le design Gameboy). -->
+
     <h1>Liste des 10 premiers pokémons.</h1>
+
     <p class="loading">En cours de chargement...</p>
+    <div class="pokemons-grid">
+        <div class="pokemon">
+            <!-- <h2 class="name"></h2>
+            <img class="image" src="" alt=""> -->
+        </div>
+
+    </div>
+
 
     <script>
         fetch("https://pokebuildapi.fr/api/v1/pokemon/limit/10")
@@ -220,24 +258,50 @@ console.log(prenoms_arr);</script> -->
             .then(pokemons_arr => {
                 const loadingTag_elem = document.querySelector(".loading");
                 loadingTag_elem.remove();
+                const grid = document.querySelector(".pokemons-grid");
                 pokemons_arr.forEach(pokemon_obj => {
                     console.log(pokemon_obj.name);
                     // J'ai le nom du pokémon 
                     // Je vais l'ajouter au body
+                    // créer card pokemon
+
+                    const pokemonCard = document.createElement("div");
+                    pokemonCard.classList.add('pokemon');
+
 
                     // J'ai besoin d'une balise p
-                    const pTag_elem = document.createElement("p");
+                    const pTag_elem = document.createElement("h2");
 
                     // J'ajoute le nom du pokémon dans le texte de la balise
                     pTag_elem.textContent = pokemon_obj.name;
 
                     // J'ajoute la balise dans le body
-                    document.body.appendChild(pTag_elem);
+                    // document.body.appendChild(pTag_elem);
+
+                    console.log(pokemon_obj.sprite);
+                    // J'ai besoin d'une balise img
+                    const imgTag_elem = document.createElement("img");
+
+
+                    // J'ajoute le nom du pokémon dans le texte de la balise
+                    imgTag_elem.image = document.querySelector("img");
+                    imgTag_elem.setAttribute("src", pokemon_obj.sprite);
+                    imgTag_elem.setAttribute("alt", pokemon_obj.name);
+
+                    //J'ajoute la balise dans le body
+
+                    pokemonCard.appendChild(pTag_elem);
+                    pokemonCard.appendChild(imgTag_elem);
+                    grid.appendChild(pokemonCard);
+
+
                 });
                 console.log(pokemons_arr)
             });
 
     </script>
+
+
     <!-- Testez le programme précédent.
 Faites un console.log(pokemons_arr) pour vous informer des attributs de chaque pokémon du tableau de pokémons.
 En plus du nom, affichez également l'image de chaque pokémon.
